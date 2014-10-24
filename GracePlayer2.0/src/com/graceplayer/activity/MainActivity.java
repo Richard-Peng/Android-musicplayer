@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Timer;
+import java.util.TimerTask;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -17,6 +19,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -44,6 +47,12 @@ public class MainActivity extends Activity {
 	private static final int PROGRESS_PAUSE = 1;
 	private static final int PROGRESS_RESET = 2;
 	
+	//播放模式常量
+	private static final int MODE_LIST_SEQUENCE= 0;
+	private static final int MODE_SINGLE_CYCLE = 1;
+	private static final int MODE_LIST_CYCLE = 2;
+	private int playmode;
+	
 	// 显示组件
 	private TextView tv_current_time;
 	private TextView tv_total_time;
@@ -69,6 +78,7 @@ public class MainActivity extends Activity {
 	
 	//歌曲列表对象
 	private ArrayList<Music> musicArrayList;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -87,6 +97,9 @@ public class MainActivity extends Activity {
 		// 初始化进度条的Handler
 		initSeekBarHandler();
 		status = MusicService.COMMAND_STOP;
+		
+		//默认播放模式是顺序播放
+		playmode = MainActivity.MODE_LIST_SEQUENCE;
 	}
 
 	void findViews() {
@@ -171,7 +184,6 @@ public class MainActivity extends Activity {
 	}
 	/**初始化音乐列表对象*/
 	private void initMusicList() {
-		
 		musicArrayList = MusicList.getMusicList();
 		//避免重复添加音乐
 		if(musicArrayList.isEmpty())
@@ -179,13 +191,9 @@ public class MainActivity extends Activity {
 			Cursor mMusicCursor = this.getContentResolver().query(
 					MediaStore.Audio.Media.EXTERNAL_CONTENT_URI, null, null, null,
 					MediaStore.Audio.AudioColumns.TITLE);
-			//标题
 			int indexTitle = mMusicCursor.getColumnIndex(MediaStore.Audio.AudioColumns.TITLE);
-			//艺术家
 			int indexArtist = mMusicCursor.getColumnIndex(MediaStore.Audio.AudioColumns.ARTIST);
-			//总时长
 			int indexTotalTime = mMusicCursor.getColumnIndex(MediaStore.Audio.AudioColumns.DURATION);
-			//路径
 			int indexPath = mMusicCursor.getColumnIndex(MediaStore.Audio.AudioColumns.DATA);
 
 			/**通过mMusicCursor游标遍历数据库，并将Music类对象加载带ArrayList中*/
@@ -343,13 +351,23 @@ public class MainActivity extends Activity {
 				break;
 			case MusicService.STATUS_COMPLETED:
 				number = intent.getIntExtra("number", 0);
-				if(number == MusicList.getMusicList().size()-1) 
+				if(playmode == MainActivity.MODE_LIST_SEQUENCE)										//顺序模式：到达列表末端时发送停止命令，否则播放下一首
 				{
-					sendBroadcastOnCommand(MusicService.STATUS_STOPPED);
+					if(number == MusicList.getMusicList().size()-1) 											
+						sendBroadcastOnCommand(MusicService.STATUS_STOPPED);
+					else
+						sendBroadcastOnCommand(MusicService.COMMAND_NEXT);
 				}
-				else
-				{
-					sendBroadcastOnCommand(MusicService.COMMAND_NEXT);
+				else if(playmode == MainActivity.MODE_SINGLE_CYCLE)								//单曲循环
+					sendBroadcastOnCommand(MusicService.COMMAND_PLAY);
+				else if(playmode == MainActivity.MODE_LIST_CYCLE)										//列表循环：到达列表末端时，把要播放的音乐设置为第一首，
+				{																															//					然后发送播放命令。			
+					if(number == musicArrayList.size()-1)
+					{
+						number = 0;
+						sendBroadcastOnCommand(MusicService.COMMAND_PLAY);
+					}
+					else sendBroadcastOnCommand(MusicService.COMMAND_NEXT);
 				}
 				
 				seekBarHandler.sendEmptyMessage(PROGRESS_RESET);
@@ -477,8 +495,47 @@ public class MainActivity extends Activity {
 				}
 			}).show();
 			break;
+		case R.id.menu_playmode:
+			String[] mode = new String[] { "顺序播放", "单曲循环", "列表循环" };
+			AlertDialog.Builder builder = new AlertDialog.Builder(
+					MainActivity.this);
+			builder.setTitle("播放模式");
+			builder.setSingleChoiceItems(mode, playmode,
+			//设置单选项，这里第二个参数是默认选择的序号，这里根据playmode的值来确定
+					new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface arg0, int arg1) {
+							// TODO Auto-generated method stub
+							playmode = arg1;
+						}
+					});
+			builder.setPositiveButton("确定",
+					new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface arg0, int arg1) {
+							// TODO Auto-generated method stub
+							switch (playmode) {
+							case 0:
+								playmode = MainActivity.MODE_LIST_SEQUENCE;
+								Toast.makeText(getApplicationContext(), R.string.sequence, Toast.LENGTH_SHORT).show();
+								break;
+							case 1:
+								playmode = MainActivity.MODE_SINGLE_CYCLE;
+								Toast.makeText(getApplicationContext(), R.string.singlecycle, Toast.LENGTH_SHORT).show();
+								break;
+							case 2:
+								playmode = MainActivity.MODE_LIST_CYCLE;
+								Toast.makeText(getApplicationContext(), R.string.listcycle, Toast.LENGTH_SHORT).show();
+								break;
+							default:
+								break;
+							}
+						}
+					});
+			builder.create().show(); 
+			break;
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
+		
 }
