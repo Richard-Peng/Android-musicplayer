@@ -7,6 +7,7 @@ import java.util.Map;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import android.annotation.TargetApi;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
@@ -16,14 +17,12 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.database.Cursor;
 import android.media.AudioManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.provider.MediaStore;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
+import android.view.*;
 import android.view.View.OnClickListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -45,7 +44,12 @@ import com.graceplayer.data.MusicList;
 import com.graceplayer.graceplayer.R;
 import com.graceplayer.model.PropertyBean;
 
-public class MainActivity extends Activity {
+import static android.view.GestureDetector.OnGestureListener;
+
+public class MainActivity extends Activity implements OnGestureListener {
+
+    //定义手势检测器实例
+    GestureDetector detector;
 	
 	// 进度条控制常量
 	private static final int PROGRESS_INCREASE = 0;
@@ -123,6 +127,11 @@ public class MainActivity extends Activity {
 		playmode = MainActivity.MODE_LIST_SEQUENCE;
 		//默认睡眠模式为关闭状态
 		sleepmode = MainActivity.NOTSLEEP;
+
+        /**************************/
+        //创建手势检测器
+        detector = new GestureDetector(this,this);
+        /**************************/
 	}
 
 	void findViews() {
@@ -335,7 +344,7 @@ public class MainActivity extends Activity {
 		sendBroadcast(intent);
 	}
 
-	/** 内部类，用于播放器状态更新的接收广播 */
+       /** 内部类，用于播放器状态更新的接收广播 */
 	class StatusChangedReceiver extends BroadcastReceiver {
 		public void onReceive(Context context, Intent intent) {
 			// 获取播放器状态
@@ -661,7 +670,8 @@ public class MainActivity extends Activity {
 				}
 			});
 	}
-	private void showSleepDialog()   
+	@TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH)
+    private void showSleepDialog()
 	{
 		//先用getLayoutInflater().inflate方法获取布局，用来初始化一个View类对象
 		final View userview = this.getLayoutInflater().inflate(R.layout.dialog, null);
@@ -767,4 +777,49 @@ public class MainActivity extends Activity {
 		
 		dialog.show();
 	}
+
+
+    @Override
+    public boolean onDown(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent2, float v, float v2) {
+        return false;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onFling(MotionEvent arg0, MotionEvent arg1, float arg2, float arg3) {
+        if(arg1.getX()-arg0.getX()>50)//第一个点小于第二个点
+        {
+            Intent intent=new Intent(MainActivity.this,LrcActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.toright_enter, R.anim.toright_exit);
+            Toast.makeText(MainActivity.this, "歌词", Toast.LENGTH_LONG).show();
+        }
+        return false;
+    }
+
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        return detector.onTouchEvent(event);
+    }
+
+
 }

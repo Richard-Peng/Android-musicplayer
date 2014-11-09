@@ -22,6 +22,8 @@ import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.GestureDetector;
+import android.view.MotionEvent;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,7 +31,7 @@ import android.widget.Toast;
 import com.graceplayer.graceplayer.R;
 import com.graceplayer.http.LrcFileDownLoad;
 
-public class LrcActivity extends Activity {
+public class LrcActivity extends Activity implements GestureDetector.OnGestureListener {
 
 	private TextView tv_lrc;
 	private int status;
@@ -44,6 +46,9 @@ public class LrcActivity extends Activity {
 
 	private AsyncDownLoad asyncDownLoad;
 
+    //定义手势检测器实例
+    GestureDetector detector;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -57,6 +62,9 @@ public class LrcActivity extends Activity {
 		tv_lrc.setText("当前没有播放歌曲！");
 		// 检查状态
 		sendBroadcastOnCommand(MusicService.COMMAND_CHECK_IS_PLAYING);
+
+        //创建手势检测器
+        detector = new GestureDetector(this,this);
 	}
 
 	/** 绑定广播接收器 */
@@ -73,7 +81,9 @@ public class LrcActivity extends Activity {
 		sendBroadcast(intent);
 	}
 
-	/** 内部类，只处理播放状态的广播 */
+
+
+    /** 内部类，只处理播放状态的广播 */
 	class StatusChangedReceiver extends BroadcastReceiver {
 		public void onReceive(Context context, Intent intent) {
 			// 获取播放器状态
@@ -213,5 +223,49 @@ public class LrcActivity extends Activity {
 		}
 		return null;
 	}
+
+    @Override
+    public boolean onDown(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public void onShowPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onSingleTapUp(MotionEvent motionEvent) {
+        return false;
+    }
+
+    @Override
+    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent2, float v, float v2) {
+        return false;
+    }
+
+    @Override
+    public void onLongPress(MotionEvent motionEvent) {
+
+    }
+
+    @Override
+    public boolean onFling(MotionEvent arg0, MotionEvent arg1, float arg2, float arg3) {
+        if(arg1.getX()-arg0.getX()>50)//第一个点小于第二个点
+        {
+            Intent intent=new Intent(LrcActivity.this,MainActivity.class);
+            startActivity(intent);
+            overridePendingTransition(R.anim.toright_enter, R.anim.toright_exit);
+            Toast.makeText(LrcActivity.this, "播放列表", Toast.LENGTH_LONG).show();
+        }
+        return false;
+    }
+
+
+    //将Activity上的触发事件交给GestureDetector处理
+    public boolean onTouchEvent(MotionEvent event)
+    {
+        return detector.onTouchEvent(event);
+    }
 	
 }
