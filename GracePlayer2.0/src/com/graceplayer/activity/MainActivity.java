@@ -767,8 +767,8 @@ public class MainActivity extends Activity implements OnGestureListener {
 				else
 				{
 					//取消任务
-					timerTask.cancel();
-					timer_sleep.cancel();
+//					timerTask.cancel();
+//					timer_sleep.cancel();
 					arg0.dismiss();
 					iv_sleep.setVisibility(View.INVISIBLE);
 				}
