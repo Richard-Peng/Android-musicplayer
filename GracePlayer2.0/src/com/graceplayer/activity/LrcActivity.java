@@ -253,8 +253,9 @@ public class LrcActivity extends Activity implements GestureDetector.OnGestureLi
     public boolean onFling(MotionEvent arg0, MotionEvent arg1, float arg2, float arg3) {
         if(arg1.getX()-arg0.getX()>50)//第一个点小于第二个点
         {
-            Intent intent=new Intent(LrcActivity.this,MainActivity.class);
-            startActivity(intent);
+            finish();
+//            Intent intent=new Intent(LrcActivity.this,MainActivity.class);
+//            startActivity(intent);
             overridePendingTransition(R.anim.toright_enter, R.anim.toright_exit);
             Toast.makeText(LrcActivity.this, "播放列表", Toast.LENGTH_LONG).show();
         }
