@@ -1,11 +1,6 @@
 package com.graceplayer.activity;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -60,6 +55,7 @@ public class MainActivity extends Activity implements OnGestureListener {
 	private static final int MODE_LIST_SEQUENCE= 0;
 	private static final int MODE_SINGLE_CYCLE = 1;
 	private static final int MODE_LIST_CYCLE = 2;
+    private static final int MODE_LIST_RANDOM = 3;
 	private int playmode;
 	
 	// 显示组件
@@ -387,17 +383,21 @@ public class MainActivity extends Activity implements OnGestureListener {
 				break;
 			case MusicService.STATUS_COMPLETED:
 				number = intent.getIntExtra("number", 0);
-				if(playmode == MainActivity.MODE_LIST_SEQUENCE)										//顺序模式：到达列表末端时发送停止命令，否则播放下一首
+                //顺序模式：到达列表末端时发送停止命令，否则播放下一首
+				if(playmode == MainActivity.MODE_LIST_SEQUENCE)
 				{
 					if(number == MusicList.getMusicList().size()-1) 											
 						sendBroadcastOnCommand(MusicService.STATUS_STOPPED);
 					else
 						sendBroadcastOnCommand(MusicService.COMMAND_NEXT);
 				}
-				else if(playmode == MainActivity.MODE_SINGLE_CYCLE)								//单曲循环
+                //单曲循环
+				else if(playmode == MainActivity.MODE_SINGLE_CYCLE)
 					sendBroadcastOnCommand(MusicService.COMMAND_PLAY);
-				else if(playmode == MainActivity.MODE_LIST_CYCLE)										//列表循环：到达列表末端时，把要播放的音乐设置为第一首，
-				{																															//					然后发送播放命令。			
+                //列表循环：到达列表末端时，把要播放的音乐设置为第一首
+				else if(playmode == MainActivity.MODE_LIST_CYCLE)
+				{
+				    //然后发送播放命令。
 					if(number == musicArrayList.size()-1)
 					{
 						number = 0;
@@ -405,6 +405,14 @@ public class MainActivity extends Activity implements OnGestureListener {
 					}
 					else sendBroadcastOnCommand(MusicService.COMMAND_NEXT);
 				}
+                //随机播放
+                else if (playmode == MainActivity.MODE_LIST_RANDOM)
+                {
+                    Random random = new Random();
+                    int randomnum = random.nextInt(listView.getCount());
+                    number = randomnum;
+                    sendBroadcastOnCommand(MusicService.COMMAND_PLAY);
+                }
 				
 				seekBarHandler.sendEmptyMessage(PROGRESS_RESET);
 				MainActivity.this.setTitle("GracePlayer");
@@ -540,11 +548,12 @@ public class MainActivity extends Activity implements OnGestureListener {
 			}).show();
 			break;
 		case R.id.menu_playmode:
-			String[] mode = new String[] { "顺序播放", "单曲循环", "列表循环" };
+			String[] mode = new String[] { "顺序播放", "单曲循环", "列表循环","随机播放" };
 			AlertDialog.Builder builder = new AlertDialog.Builder(
 					MainActivity.this);
 			builder.setTitle("播放模式");
-			builder.setSingleChoiceItems(mode, playmode,						//设置单选项，这里第二个参数是默认选择的序号，这里根据playmode的值来确定
+            //设置单选项，这里第二个参数是默认选择的序号，这里根据playmode的值来确定
+			builder.setSingleChoiceItems(mode, playmode,
 					new DialogInterface.OnClickListener() {
 						@Override
 						public void onClick(DialogInterface arg0, int arg1) {
@@ -570,6 +579,10 @@ public class MainActivity extends Activity implements OnGestureListener {
 								playmode = MainActivity.MODE_LIST_CYCLE;
 								Toast.makeText(getApplicationContext(), R.string.listcycle, Toast.LENGTH_SHORT).show();
 								break;
+                            case 3:
+                                playmode = MainActivity.MODE_LIST_RANDOM;
+                                Toast.makeText(getApplicationContext(), R.string.randomcycle, Toast.LENGTH_SHORT).show();
+                                break;
 							default:
 								break;
 							}
@@ -746,9 +759,14 @@ public class MainActivity extends Activity implements OnGestureListener {
 				// TODO Auto-generated method stub
 				sleepmode = MainActivity.NOTSLEEP;
 				sleepminute = 20;
-				timerTask.cancel();
-				timer_sleep.cancel();
 				iv_sleep.setVisibility(View.INVISIBLE);
+                //睡眠模式开启过，执行取消定时器任务
+                if(sleepmode == MainActivity.ISSLEEP)
+                {
+                    //取消定时器任务
+                    timerTask.cancel();
+                    timer_sleep.cancel();
+                }
 			}
 		});
 		//设置确定按钮响应事件

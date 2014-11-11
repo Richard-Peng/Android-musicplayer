@@ -20,6 +20,16 @@
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/res/layout/dialog.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/res/layout/listview.xml">
+        <config>
+          <theme>@style/AppTheme</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/res/layout/lrc.xml">
         <config>
           <theme>@style/AppTheme</theme>
@@ -53,15 +63,47 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainActivity.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48138297" vertical-offset="17084" max-vertical-offset="18824">
-              <caret line="768" column="26" selection-start-line="768" selection-start-column="26" selection-end-line="768" selection-end-column="26" />
+            <state vertical-scroll-proportion="-16.827587" vertical-offset="18960" max-vertical-offset="19942">
+              <caret line="830" column="58" selection-start-line="830" selection-start-column="45" selection-end-line="830" selection-end-column="58" />
               <folding>
-                <element signature="e#22167#22354#0" expanded="true" />
-                <element signature="e#22349#22350#0" expanded="true" />
+                <element signature="e#17584#17780#0" expanded="true" />
+                <element signature="e#17772#17773#0" expanded="true" />
+                <element signature="e#19981#20113#0" expanded="true" />
+                <element signature="e#20107#20108#0" expanded="true" />
+                <element signature="e#22957#23189#0" expanded="true" />
+                <element signature="e#23184#23185#0" expanded="true" />
+                <element signature="e#23396#23577#0" expanded="true" />
+                <element signature="e#23572#23573#0" expanded="true" />
+                <element signature="e#23627#24131#0" expanded="true" />
+                <element signature="e#24126#24127#0" expanded="true" />
+                <element signature="e#24182#24743#0" expanded="true" />
+                <element signature="e#24738#24739#0" expanded="true" />
+                <element signature="e#25796#25797#0" expanded="true" />
+                <element signature="e#25847#25848#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toright_enter.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/res/anim/toright_enter.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="toright_exit.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/res/anim/toright_exit.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -69,9 +111,30 @@
       <file leaf-file-name="LrcActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/LrcActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="5321" max-vertical-offset="6240">
-              <caret line="260" column="9" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6240">
+              <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MusicService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/MusicService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5720">
+              <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+              <folding>
+                <marker date="1410530425184" expanded="true" signature="1818:1835" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="2024:2053" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="2933:2958" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="4135:4150" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="4384:4399" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="4598:4613" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="4864:4878" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="5057:5070" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="5395:5420" placeholder="/**...*/" />
+                <marker date="1410530425184" expanded="true" signature="5564:5583" placeholder="/**...*/" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +151,10 @@
       <list>
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/res/layout/lrc.xml" />
-        <option value="$PROJECT_DIR$/src/com/graceplayer/activity/LrcActivity.java" />
+        <option value="$PROJECT_DIR$/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/src/com/graceplayer/activity/MainActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/graceplayer/activity/LrcActivity.java" />
+        <option value="$PROJECT_DIR$/src/com/graceplayer/activity/MusicService.java" />
       </list>
     </option>
   </component>
@@ -125,6 +190,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -133,9 +199,112 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graceplayer" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graceplayer" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="data" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="graceplayer" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="activity" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GracePlayer2.0" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="anim" />
+              <option name="myItemType" value="com.android.tools.idea.gradle.projectView.AndroidPsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -148,8 +317,6 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="FullScreen" value="false" />
-    <property name="OverrideImplement.combined" value="true" />
-    <property name="OverrideImplement.overriding.sorted" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -192,6 +359,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -217,19 +397,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -329,8 +496,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -343,19 +510,19 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14162162" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15675676" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14552239" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18976545" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -386,11 +553,114 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="9334" max-vertical-offset="20202">
+          <caret line="404" column="17" selection-start-line="404" selection-start-column="17" selection-end-line="404" selection-end-column="17" />
+          <folding>
+            <element signature="e#17584#17780#0" expanded="true" />
+            <element signature="e#17772#17773#0" expanded="true" />
+            <element signature="e#19981#20113#0" expanded="true" />
+            <element signature="e#20107#20108#0" expanded="true" />
+            <element signature="e#22957#23189#0" expanded="true" />
+            <element signature="e#23184#23185#0" expanded="true" />
+            <element signature="e#23396#23577#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23627#24131#0" expanded="true" />
+            <element signature="e#24126#24127#0" expanded="true" />
+            <element signature="e#24182#24743#0" expanded="true" />
+            <element signature="e#24738#24739#0" expanded="true" />
+            <element signature="e#25796#25797#0" expanded="true" />
+            <element signature="e#25847#25848#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/listview.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="728">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dialog.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1144">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/widget_layout.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1924" max-vertical-offset="3900">
+          <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="416" max-vertical-offset="676">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="442" max-vertical-offset="1144">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/LrcActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="6760" max-vertical-offset="7228">
+          <caret line="260" column="9" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="21606">
           <caret line="705" column="13" selection-start-line="705" selection-start-column="13" selection-end-line="705" selection-end-column="13" />
           <folding>
-            <element signature="e#22167#22354#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
+            <element signature="e#17584#17780#0" expanded="true" />
+            <element signature="e#17772#17773#0" expanded="true" />
+            <element signature="e#19981#20113#0" expanded="true" />
+            <element signature="e#20107#20108#0" expanded="true" />
+            <element signature="e#22957#23189#0" expanded="true" />
+            <element signature="e#23184#23185#0" expanded="true" />
+            <element signature="e#23396#23577#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23627#24131#0" expanded="true" />
+            <element signature="e#24126#24127#0" expanded="true" />
+            <element signature="e#24182#24743#0" expanded="true" />
+            <element signature="e#24738#24739#0" expanded="true" />
+            <element signature="e#25796#25797#0" expanded="true" />
+            <element signature="e#25847#25848#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -408,8 +678,20 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="17654" max-vertical-offset="21216">
           <caret line="685" column="71" selection-start-line="685" selection-start-column="71" selection-end-line="685" selection-end-column="71" />
           <folding>
-            <element signature="e#22167#22354#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
+            <element signature="e#17584#17780#0" expanded="true" />
+            <element signature="e#17772#17773#0" expanded="true" />
+            <element signature="e#19981#20113#0" expanded="true" />
+            <element signature="e#20107#20108#0" expanded="true" />
+            <element signature="e#22957#23189#0" expanded="true" />
+            <element signature="e#23184#23185#0" expanded="true" />
+            <element signature="e#23396#23577#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23627#24131#0" expanded="true" />
+            <element signature="e#24126#24127#0" expanded="true" />
+            <element signature="e#24182#24743#0" expanded="true" />
+            <element signature="e#24738#24739#0" expanded="true" />
+            <element signature="e#25796#25797#0" expanded="true" />
+            <element signature="e#25847#25848#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -427,8 +709,20 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="10164" max-vertical-offset="19006">
           <caret line="814" column="0" selection-start-line="814" selection-start-column="0" selection-end-line="814" selection-end-column="0" />
           <folding>
-            <element signature="e#22167#22354#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
+            <element signature="e#17584#17780#0" expanded="true" />
+            <element signature="e#17772#17773#0" expanded="true" />
+            <element signature="e#19981#20113#0" expanded="true" />
+            <element signature="e#20107#20108#0" expanded="true" />
+            <element signature="e#22957#23189#0" expanded="true" />
+            <element signature="e#23184#23185#0" expanded="true" />
+            <element signature="e#23396#23577#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23627#24131#0" expanded="true" />
+            <element signature="e#24126#24127#0" expanded="true" />
+            <element signature="e#24182#24743#0" expanded="true" />
+            <element signature="e#24738#24739#0" expanded="true" />
+            <element signature="e#25796#25797#0" expanded="true" />
+            <element signature="e#25847#25848#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -445,8 +739,20 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="16864" max-vertical-offset="17550">
           <caret line="199" column="13" selection-start-line="199" selection-start-column="13" selection-end-line="199" selection-end-column="13" />
           <folding>
-            <element signature="e#22167#22354#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
+            <element signature="e#17584#17780#0" expanded="true" />
+            <element signature="e#17772#17773#0" expanded="true" />
+            <element signature="e#19981#20113#0" expanded="true" />
+            <element signature="e#20107#20108#0" expanded="true" />
+            <element signature="e#22957#23189#0" expanded="true" />
+            <element signature="e#23184#23185#0" expanded="true" />
+            <element signature="e#23396#23577#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23627#24131#0" expanded="true" />
+            <element signature="e#24126#24127#0" expanded="true" />
+            <element signature="e#24182#24743#0" expanded="true" />
+            <element signature="e#24738#24739#0" expanded="true" />
+            <element signature="e#25796#25797#0" expanded="true" />
+            <element signature="e#25847#25848#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -456,8 +762,20 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="16864" max-vertical-offset="17550">
           <caret line="199" column="13" selection-start-line="199" selection-start-column="13" selection-end-line="199" selection-end-column="13" />
           <folding>
-            <element signature="e#22167#22354#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
+            <element signature="e#17584#17780#0" expanded="true" />
+            <element signature="e#17772#17773#0" expanded="true" />
+            <element signature="e#19981#20113#0" expanded="true" />
+            <element signature="e#20107#20108#0" expanded="true" />
+            <element signature="e#22957#23189#0" expanded="true" />
+            <element signature="e#23184#23185#0" expanded="true" />
+            <element signature="e#23396#23577#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23627#24131#0" expanded="true" />
+            <element signature="e#24126#24127#0" expanded="true" />
+            <element signature="e#24182#24743#0" expanded="true" />
+            <element signature="e#24738#24739#0" expanded="true" />
+            <element signature="e#25796#25797#0" expanded="true" />
+            <element signature="e#25847#25848#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -467,8 +785,20 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="16864" max-vertical-offset="17550">
           <caret line="199" column="13" selection-start-line="199" selection-start-column="13" selection-end-line="199" selection-end-column="13" />
           <folding>
-            <element signature="e#22167#22354#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
+            <element signature="e#17584#17780#0" expanded="true" />
+            <element signature="e#17772#17773#0" expanded="true" />
+            <element signature="e#19981#20113#0" expanded="true" />
+            <element signature="e#20107#20108#0" expanded="true" />
+            <element signature="e#22957#23189#0" expanded="true" />
+            <element signature="e#23184#23185#0" expanded="true" />
+            <element signature="e#23396#23577#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23627#24131#0" expanded="true" />
+            <element signature="e#24126#24127#0" expanded="true" />
+            <element signature="e#24182#24743#0" expanded="true" />
+            <element signature="e#24738#24739#0" expanded="true" />
+            <element signature="e#25796#25797#0" expanded="true" />
+            <element signature="e#25847#25848#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -480,26 +810,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.571428" vertical-offset="1572" max-vertical-offset="3900">
-          <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/res/layout/lrc.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/layout/lrc.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3844086" vertical-offset="0" max-vertical-offset="780">
           <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
@@ -510,22 +829,129 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="676">
+          <caret line="16" column="44" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/menu/main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1144">
+          <caret line="17" column="36" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/listview.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="728">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/dialog.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1144">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/widget_layout.xml">
+      <provider selected="true" editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1560">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/layout/main.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1924" max-vertical-offset="3900">
+          <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/MusicService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1830" max-vertical-offset="5720">
+          <caret line="99" column="26" selection-start-line="99" selection-start-column="26" selection-end-line="99" selection-end-column="26" />
+          <folding>
+            <marker date="1410530425184" expanded="true" signature="1818:1835" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="2024:2053" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="2933:2958" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="4135:4150" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="4384:4399" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="4598:4613" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="4864:4878" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="5057:5070" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="5395:5420" placeholder="/**...*/" />
+            <marker date="1410530425184" expanded="true" signature="5564:5583" placeholder="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/LrcActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5321" max-vertical-offset="6240">
-          <caret line="260" column="9" selection-start-line="260" selection-start-column="9" selection-end-line="260" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6240">
+          <caret line="36" column="23" selection-start-line="36" selection-start-column="23" selection-end-line="36" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/graceplayer/activity/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48138297" vertical-offset="17084" max-vertical-offset="18824">
-          <caret line="768" column="26" selection-start-line="768" selection-start-column="26" selection-end-line="768" selection-end-column="26" />
+        <state vertical-scroll-proportion="-16.827587" vertical-offset="18960" max-vertical-offset="19942">
+          <caret line="830" column="58" selection-start-line="830" selection-start-column="45" selection-end-line="830" selection-end-column="58" />
           <folding>
-            <element signature="e#22167#22354#0" expanded="true" />
-            <element signature="e#22349#22350#0" expanded="true" />
+            <element signature="e#17584#17780#0" expanded="true" />
+            <element signature="e#17772#17773#0" expanded="true" />
+            <element signature="e#19981#20113#0" expanded="true" />
+            <element signature="e#20107#20108#0" expanded="true" />
+            <element signature="e#22957#23189#0" expanded="true" />
+            <element signature="e#23184#23185#0" expanded="true" />
+            <element signature="e#23396#23577#0" expanded="true" />
+            <element signature="e#23572#23573#0" expanded="true" />
+            <element signature="e#23627#24131#0" expanded="true" />
+            <element signature="e#24126#24127#0" expanded="true" />
+            <element signature="e#24182#24743#0" expanded="true" />
+            <element signature="e#24738#24739#0" expanded="true" />
+            <element signature="e#25796#25797#0" expanded="true" />
+            <element signature="e#25847#25848#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/anim/toright_enter.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/anim/toright_exit.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="751">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -3,6 +3,7 @@
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/src/com/graceplayer/activity/LrcActivity.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/src/com/graceplayer/activity/MainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/src/com/graceplayer/activity/MusicService.java" charset="GBK" />
   </component>
 </project>
 
