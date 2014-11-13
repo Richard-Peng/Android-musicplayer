@@ -753,13 +753,8 @@ public class MainActivity extends Activity implements OnGestureListener {
 		});
 		//设置重置按钮响应时间
 		dialog.setNeutralButton("重置", new DialogInterface.OnClickListener() {
-			
 			@Override
 			public void onClick(DialogInterface arg0, int arg1) {
-				// TODO Auto-generated method stub
-				sleepmode = MainActivity.NOTSLEEP;
-				sleepminute = 20;
-				iv_sleep.setVisibility(View.INVISIBLE);
                 //睡眠模式开启过，执行取消定时器任务
                 if(sleepmode == MainActivity.ISSLEEP)
                 {
@@ -767,6 +762,9 @@ public class MainActivity extends Activity implements OnGestureListener {
                     timerTask.cancel();
                     timer_sleep.cancel();
                 }
+                sleepmode = MainActivity.NOTSLEEP;
+                sleepminute = 20;
+                iv_sleep.setVisibility(View.INVISIBLE);
 			}
 		});
 		//设置确定按钮响应事件
@@ -784,9 +782,6 @@ public class MainActivity extends Activity implements OnGestureListener {
 				}
 				else
 				{
-					//取消任务
-//					timerTask.cancel();
-//					timer_sleep.cancel();
 					arg0.dismiss();
 					iv_sleep.setVisibility(View.INVISIBLE);
 				}
